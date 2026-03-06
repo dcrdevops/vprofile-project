@@ -55,6 +55,7 @@ pipeline {
                     -Dsonar.projectKey=vprofile \
                     -Dsonar.host.url=${env.SONAR_HOST_URL} \
                     -Dsonar.login=${env.SONAR_AUTH_TOKEN}"
+                }
             }
         }
     }
