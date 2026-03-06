@@ -1,4 +1,3 @@
-#first jenkin file
 pipeline {
     agent any
     tools {
