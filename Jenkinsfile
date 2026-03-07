@@ -58,5 +58,14 @@ pipeline {
                 }
             }
         }
+        stage("Quality Gate"){
+            steps{
+                timeout(time: 1, unit: 'HOURS'){
+                    // Parameter indiates whether to set pipeline to UNSTABLE if quality gate fails
+                    // true = set pipeline to UNSTABLE, false = don't
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
     }
 }
