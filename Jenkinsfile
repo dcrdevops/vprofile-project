@@ -51,7 +51,7 @@ pipeline {
             }
             steps{
                 withSonarQubeEnv("${SONARSERVER}"){
-                    sleep 10
+                    sleep 20
                     sh "mvn -s settings.xml sonar:sonar \
                     -Dsonar.projectKey=vprofile \
                     -Dsonar.host.url=${env.SONAR_HOST_URL} \
